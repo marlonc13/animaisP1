@@ -13,9 +13,9 @@ import java.util.UUID;
 @RequestMapping("/animais")
 public class AnimaisController {
 
-    private AnimaisService animaisService;
+    private final AnimaisService animaisService;
 
-    public AnimaisController(AnimaisService animalService) {
+    public AnimaisController(AnimaisService animaisService) {
         this.animaisService = animaisService;
     }
 
