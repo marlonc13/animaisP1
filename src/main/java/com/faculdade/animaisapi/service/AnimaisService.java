@@ -1,5 +1,6 @@
 package com.faculdade.animaisapi.service;
 
+import com.faculdade.animaisapi.exception.AnimaisNotFoundException;
 import com.faculdade.animaisapi.model.Animais;
 import com.faculdade.animaisapi.repository.AnimaisRepository;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class AnimaisService {
 
     public Animais atualizar(UUID id, Animais animalAtualizado) {
         Animais animal = animaisRepository.findById(id)
-                .orElseThrow(AnimalNotFoundException::new);
+                .orElseThrow(AnimaisNotFoundException::new);
 
         animal.setNome(animalAtualizado.getNome());
         animal.setEspecie(animalAtualizado.getEspecie());
@@ -46,7 +47,7 @@ public class AnimaisService {
 
     public void excluir(UUID id) {
         if (!animaisRepository.existsById(id)) {
-            throw new AnimalNotFoundException();
+            throw new AnimaisNotFoundException();
         }
 
         animaisRepository.deleteById(id);

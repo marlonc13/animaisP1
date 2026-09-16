@@ -26,9 +26,9 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(erros);
     }
 
-    @ExceptionHandler(AnimalNotFoundException.class)
+    @ExceptionHandler(AnimaisNotFoundException.class)
     public ResponseEntity<Map<String, String>> tratarAnimalNaoEncontrado(
-            AnimalNotFoundException exception) {
+            AnimaisNotFoundException exception) {
 
         Map<String, String> erro = new HashMap<>();
         erro.put("erro", exception.getMessage());
