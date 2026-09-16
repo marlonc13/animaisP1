@@ -27,8 +27,8 @@ public class AnimalService {
         return animalRepository.findAll();
     }
 
-    public Optional<Animal> buscarPorId(UUID id) {
-        return animalRepository.findById(id);
+    public Optional<Animal> buscarPorId(UUID _id) {
+        return animalRepository.findById(_id);
     }
 
     public Animal atualizar(UUID id, Animal animalAtualizado) {
