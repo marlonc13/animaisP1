@@ -113,6 +113,8 @@ Após iniciar a aplicação, a API estará disponível em:
 http://localhost:8080/animais
 ```
 
-## Autora
+## Autores
 
-**Aline Julia Lasneau**
+**Marlon Soares** 
+
+**Gabriel Arruda**

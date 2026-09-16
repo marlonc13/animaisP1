@@ -1,11 +1,99 @@
+### 1 - CADASTRAR BOLT
+
 POST http://localhost:8080/animais
 Content-Type: application/json
 
 {
-  "nome": "Thor",
+  "nome": "Bolt",
   "especie": "Cachorro",
-  "raca": "Labrador",
+  "raca": "Pastor Alemao",
+  "idade": 3,
+  "sexo": "Macho",
+  "disponivelParaAdocao": true
+}
+
+###
+
+
+
+POST http://localhost:8080/animais
+Content-Type: application/json
+
+{
+  "nome": "Mel",
+  "especie": "Cachorro",
+  "raca": "Beagle",
+  "idade": 2,
+  "sexo": "Femea",
+  "disponivelParaAdocao": true
+}
+
+###
+
+
+
+POST http://localhost:8080/animais
+Content-Type: application/json
+
+{
+  "nome": "Nina",
+  "especie": "Gato",
+  "raca": "Siames",
+  "idade": 1,
+  "sexo": "Femea",
+  "disponivelParaAdocao": true
+}
+###
+
+GET http://localhost:8080/animais/a5121f68-54c3-48cc-b982-74bbd5fb1519
+
+###
+
+###  ALTERAR BOLT
+
+PUT http://localhost:8080/animais/a5121f68-54c3-48cc-b982-74bbd5fb1519
+Content-Type: application/json
+
+{
+  "nome": "Bolt",
+  "especie": "Cachorro",
+  "raca": "Pastor Alemao",
   "idade": 4,
   "sexo": "Macho",
   "disponivelParaAdocao": true
 }
+
+
+
+###
+
+###  EXCLUIR BOLT
+
+DELETE http://localhost:8080/animais/a5121f68-54c3-48cc-b982-74bbd5fb1519
+
+###
+
+### - N encontrado
+
+GET http://localhost:8080/animais/a5121f68-54c3-48cc-b982-74bbd5fb1519
+
+
+###
+
+### TEste de criterios
+
+POST http://localhost:8080/animais
+Content-Type: application/json
+
+{
+  "nome": "",
+  "especie": "",
+  "raca": "Vira-lata",
+  "idade": -5,
+  "sexo": "Macho",
+  "disponivelParaAdocao": true
+}
+
+###
+
+GET http://localhost:8080/animais
